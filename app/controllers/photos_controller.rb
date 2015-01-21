@@ -21,6 +21,15 @@ class PhotosController < ApplicationController
 		end
 	end
 
+	def destroy
+		@photo = Photo.find(params[:id])
+		@photo.destroy
+		respond_to do |format|
+			format.html { redirect_to gallery_path(@gallery), alert: 'Photo destroyed' }
+			format.json { head :no_content }
+		end
+	end
+
 	private
 	def photo_params
 		params.require(:photo).permit(:image)
