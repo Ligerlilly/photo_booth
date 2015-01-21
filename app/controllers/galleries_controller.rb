@@ -24,6 +24,16 @@ class GalleriesController < ApplicationController
 		end
 	end
 
+	def destroy
+		@gallery = Gallery.find(params[:id])
+		@gallery.destroy
+		respond_to do |format|
+			format.html { redirect_to galleries_path, alert: 'Gallery destroyed' }
+			format.json { head :no_content }
+		end
+		
+	end
+
   private
   def gallery_params
   	params.require(:gallery).permit(:name, :photo)
