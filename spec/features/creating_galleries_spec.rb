@@ -10,4 +10,5 @@
 			click_button 'Create Gallery'
 			expect(page).to have_content('Hi')
 		end
+
 	end

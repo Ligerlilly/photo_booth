@@ -7,6 +7,10 @@ class GalleriesController < ApplicationController
 		@gallery = Gallery.new
 	end
 
+	def show
+		@gallery = Gallery.find(params[:id])
+	end
+
 	def create
 		@gallery = Gallery.new(gallery_params)
 		respond_to do |format|
