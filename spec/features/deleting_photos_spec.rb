@@ -1,11 +1,16 @@
   require 'spec_helper'
-  feature 'deleting photos' do
+  feature 'Deleting photos' do
   	before do
   		FactoryGirl.create(:gallery, name: 'Hi')
+      FactoryGirl.create(:user)
   	end
 
-  	scenario 'can delete photos' do
-  		visit '/'
+  	scenario ' user can delete photos' do
+  		visit '/admin'
+      click_link 'Sign in'
+      fill_in 'Email', with: 'test@test.com'
+      fill_in 'Password', with: 'password'
+      click_button 'Log in'
   		click_link 'Galleries'
   		click_link 'Hi'
   		click_link 'Add Photo'

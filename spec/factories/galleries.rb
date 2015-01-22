@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :gallery do
-    name "MyString"
+    name 'Gallery' 
   end
 
 end

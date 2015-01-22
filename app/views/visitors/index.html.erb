@@ -8,7 +8,7 @@
   </ol>
  
   <!-- Wrapper for slides -->
- 
+    <% unless Rails.env.test? %>
 	  <div class="carousel-inner">
 	    <div class="item active"> 
 	      <%= image_tag random_photos_array[0].image %>
@@ -18,7 +18,7 @@
 	    </div>
 
 	    <div class="item">
-	      <%= image_tag random_photos_array[1].image  %>
+	      <%= image_tag random_photos_array[1].image %>
 	      <div class="carousel-caption">
 	          <h3>Caption Text</h3>
 	      </div>
@@ -29,7 +29,20 @@
 	          <h3>Caption Text</h3>
 	      </div>
 	    </div>
+	    <div class="item">
+	      <%= image_tag  random_photos_array[3].image %>
+	      <div class="carousel-caption">
+	          <h3>Caption Text</h3>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <%= image_tag  random_photos_array[4].image %>
+	      <div class="carousel-caption">
+	          <h3>Caption Text</h3>
+	      </div>
+	    </div>
 	  </div>
+	  <% end %>
   
  
   <!-- Controls -->
