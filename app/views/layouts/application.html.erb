@@ -9,7 +9,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <header>
+    <header id='header'>
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
@@ -17,7 +17,7 @@
        <%= yield %>
     </main>
     <% if Rails.env.development? %>
-      <div class="debug_dump"><%= debug(params) %></div>
+      <!--<div class="debug_dump"><%= debug(params) %></div>-->
     <% end %>
   </body>
 </html>

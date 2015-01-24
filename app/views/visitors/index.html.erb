@@ -1,44 +1,44 @@
-<h3>Welcome</h3>
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
+
+<div  id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000" >
+  <!-- Indicators 
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
+  </ol>-->
  
   <!-- Wrapper for slides -->
     <% unless Rails.env.test? %>
 	  <div class="carousel-inner">
 	    <div class="item active"> 
-	      <%= image_tag random_photos_array[0].image %>
+	      <%= image_tag random_photos_array[1].image, class: 'slide' %>
 	      <div class="carousel-caption">
-	          <h3>Caption Text</h3>
+	          
 	      </div>
 	    </div>
 
 	    <div class="item">
-	      <%= image_tag random_photos_array[1].image %>
+	      <%= image_tag random_photos_array[2].image, class: 'slide' %>
 	      <div class="carousel-caption">
-	          <h3>Caption Text</h3>
+	          
 	      </div>
 	    </div>
 	    <div class="item">
-	      <%= image_tag  random_photos_array[2].image %>
+	      <%= image_tag  random_photos_array[3].image, class: 'slide' %>
 	      <div class="carousel-caption">
-	          <h3>Caption Text</h3>
+	          
 	      </div>
 	    </div>
 	    <div class="item">
-	      <%= image_tag  random_photos_array[3].image %>
+	      <%= image_tag  random_photos_array[4].image, class: 'slide' %>
 	      <div class="carousel-caption">
-	          <h3>Caption Text</h3>
+	         
 	      </div>
 	    </div>
 	    <div class="item">
-	      <%= image_tag  random_photos_array[4].image %>
+	      <%= image_tag  random_photos_array[5].image, class: 'slide' %>
 	      <div class="carousel-caption">
-	          <h3>Caption Text</h3>
+	          
 	      </div>
 	    </div>
 	  </div>

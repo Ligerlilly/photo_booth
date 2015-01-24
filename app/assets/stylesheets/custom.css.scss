@@ -39,3 +39,61 @@
   display: block;
   font-style: italic;
 }
+
+
+/* Carousel base class */
+.carousel {
+  //height: 600px;
+  //margin-bottom: 60px;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  //width: 1336px;
+  //height: 570px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  
+  //width: 1336px;
+  //height: 570px;
+}
+
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.slide {
+  //width: 1336px;
+  //height: 570px;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  padding-right: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.img {
+  width: 400px;
+  height: 300px;
+}
+
+#float {
+  float: right;
+}

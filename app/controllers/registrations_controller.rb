@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-	before_action :admin?
+	#before_action :admin?
 
 	private
 	def admin?

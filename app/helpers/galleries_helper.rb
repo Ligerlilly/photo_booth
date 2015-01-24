@@ -12,7 +12,7 @@ module GalleriesHelper
 		gallery.photos.each do |photo|
 		  photos.push(photo)
 		end
-		photos[rand(10) + 1].image_url(:thumb).to_s 
+		photos[rand(6) + 1].image_url(:thumb).to_s 
 	end
 
 
