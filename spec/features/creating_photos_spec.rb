@@ -5,7 +5,7 @@
       FactoryGirl.create(:user)
   	end
 
-  	scenario 'user can upload photos to a gallery' do
+  	scenario 'users can upload photos to a gallery' do
   		visit '/admin'
       click_link 'Sign in'
       fill_in 'Email', with: 'test@test.com'

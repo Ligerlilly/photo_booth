@@ -11,6 +11,23 @@ class GalleriesController < ApplicationController
 		@gallery = Gallery.find(params[:id])
 	end
 
+	def edit
+		@gallery = Gallery.find(params[:id])
+	end
+
+	def update
+		@gallery = Gallery.find(params[:id])
+		respond_to do |format|
+			if @gallery.update(gallery_params)
+				format.html { redirect_to galleries_path }
+				format.json { head :no_content }
+			else
+				format.html { render action: 'edit' }
+				format.json { render json: @entry.errors, status: :unprocessable_entity }
+			end
+		end
+	end
+
 	def create
 		@gallery = Gallery.new(gallery_params)
 		@gallery.id = Gallery.last.id.to_i + 1

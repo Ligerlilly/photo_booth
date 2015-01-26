@@ -6,7 +6,7 @@
   		FactoryGirl.create(:gallery)
   	end
 
-    scenario 'user can delete galleries' do
+    scenario 'users can delete galleries' do
     	visit '/admin'
     	click_link 'Sign in'
     	fill_in 'Email', with: 'test@test.com'

@@ -5,7 +5,7 @@
       FactoryGirl.create(:user)
   	end
 
-  	scenario ' user can delete photos' do
+  	scenario 'users can delete photos' do
   		visit '/admin'
       click_link 'Sign in'
       fill_in 'Email', with: 'test@test.com'

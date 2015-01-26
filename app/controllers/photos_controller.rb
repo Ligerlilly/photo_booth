@@ -8,6 +8,23 @@ class PhotosController < ApplicationController
 		@photo = Photo.find(params[:id])
 	end
 
+	def edit
+		@photo = @gallery.photos.find(params[:id])
+	end
+
+	def update
+		@photo = @gallery.photos.find(params[:id])
+		respond_to do |format|
+			if @photo.update(photo_params)
+				format.html { redirect_to gallery_path(@photo.gallery_id), notice: 'Photo updated.' }
+				format.json { head :no_content }
+			else
+				format.html { render action: 'edit' }
+				format.json { render json: @entry.errors, status: :unprocessable_entity }
+			end
+		end
+	end
+
 	def create
 		@photo = @gallery.photos.new(photo_params)
 		respond_to  do |format|

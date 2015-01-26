@@ -4,5 +4,7 @@
 	<!--<%= link_to image_tag(gallery.photos.first.image_url(:thumb).to_s), gallery_path(gallery) %>-->
 	<%= link_to image_tag(random_gallery_cover(gallery)), gallery_path(gallery) %>
 	<% end %>
+	<%= link_to 'Edit', edit_gallery_path(gallery) if current_user %>
+	<br />
 	<%= link_to "Delete", gallery_path(gallery), method: :delete, data: { confirm: 'Are you sure?' } if current_user %>
 </div> 
