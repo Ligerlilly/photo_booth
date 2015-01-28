@@ -30,7 +30,7 @@ class GalleriesController < ApplicationController
 
 	def create
 		@gallery = Gallery.new(gallery_params)
-		@gallery.id = Gallery.last.id.to_i + 1
+		@gallery.id = Gallery.last.id.to_i + 1 
 		respond_to do |format|
 			if @gallery.save
 				format.html { redirect_to galleries_path, notice: 'Gallery has been created' }
