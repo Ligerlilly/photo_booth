@@ -7,6 +7,12 @@
 			FactoryGirl.create(:user)
 			FactoryGirl.create(:gallery)
 		end
+
+		scenario 'visitors can not create a gallery' do
+			visit '/'
+			click_link 'Galleries'
+			expect(page).not_to have_content('Create Gallery')
+		end
 		
 		scenario 'users can create a gallery' do
 			visit '/admin'

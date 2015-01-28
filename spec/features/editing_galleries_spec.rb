@@ -6,6 +6,14 @@
 	  	FactoryGirl.create(:gallery)
 	  end
 
+	  scenario 'visitors can not edit galleries' do
+	  	visit '/'
+	  	click_link 'Galleries'
+	  	expect(page).not_to have_content('Edit')
+	  end
+
+
+
 	  scenario 'users can edit galleries' do
 	  	visit '/admin'
 	  	click_link 'Sign in'

@@ -5,6 +5,13 @@
       FactoryGirl.create(:user)
   	end
 
+    scenario 'visitors can not upload photos to a gallery' do
+      visit '/'
+      click_link 'Galleries'
+      click_link 'Hi'
+      expect(page).not_to have_content('Add Photo')
+    end
+
   	scenario 'users can upload photos to a gallery' do
   		visit '/admin'
       click_link 'Sign in'

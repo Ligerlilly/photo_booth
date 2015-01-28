@@ -6,7 +6,7 @@
 	  	FactoryGirl.create(:gallery)
 	  end
 
-	  scenario 'users can edit photos' do
+	  scenario 'users can edit photos and visitors can not' do
 	  	visit '/admin'
 	  	click_link 'Sign in'
 	  	fill_in 'Email', with: 'test@test.com'
@@ -22,7 +22,10 @@
 	  	attach_file('photo_image', '/home/user/public_html/images/breakfast.jpg')
 	  	click_button 'Update Photo'
 	  	expect(page).to have_css("img[src$='breakfast.jpg']")
-
+	  	visit '/admin'
+	  	click_link 'Sign out'
+	  	visit '/galleries/10'
+	  	expect(page).not_to have_content('Edit')
 	  end
 
   end

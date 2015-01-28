@@ -6,6 +6,12 @@
   		FactoryGirl.create(:gallery)
   	end
 
+    scenario 'visitors can not delete galleries' do
+      visit '/'
+      click_link 'Galleries'
+      expect(page).not_to have_content('Delete')
+    end
+
     scenario 'users can delete galleries' do
     	visit '/admin'
     	click_link 'Sign in'
