@@ -45,6 +45,8 @@
 .carousel {
   //height: 600px;
   //margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Declare heights because of positioning of img element */
@@ -65,11 +67,6 @@
   right: 0;
   left: 0;
   z-index: 20;
-}
-
-.slide {
-  //width: 1336px;
-  //height: 570px;
 }
 
 #logo {
@@ -102,3 +99,4 @@
 .gallery {
   margin-top: 30px;
 }
+
