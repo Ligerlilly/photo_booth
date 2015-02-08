@@ -7,6 +7,10 @@
 		$('.carousel').css('width',($(window).width() - 350));
 	};
 	
-	$(document).ready(ready);
-			
-	$(document).on('page:load', ready);
+	if( ! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $(document).ready(ready);
+	  $(document).on('page:load', ready);
+  } 
+  
+
+	
