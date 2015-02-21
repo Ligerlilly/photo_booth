@@ -23,7 +23,7 @@ class GalleriesController < ApplicationController
 				format.json { head :no_content }
 			else
 				format.html { render action: 'edit' }
-				format.json { render json: @entry.errors, status: :unprocessable_entity }
+				format.json { render json: @gallery.errors, status: :unprocessable_entity }
 			end
 		end
 	end
@@ -42,7 +42,7 @@ class GalleriesController < ApplicationController
 				format.json { head :no_content }
 			else
 				format.html { render action: 'new' }
-				format.json { render json: @entry.errors, status: :unprocessable_entity }
+				format.json { render json: @gallery.errors, status: :unprocessable_entity }
 			end
 		end
 	end

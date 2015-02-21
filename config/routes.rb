@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   	root to: 'base#index'
   	resources :users
   end
-
+  resources :fees
+  resources :saves
 end
