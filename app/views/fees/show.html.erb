@@ -1,4 +1,4 @@
 
 <%= render @fee %>
-<%= link_to 'Edit', edit_fee_path if current_user %> |
-<%= link_to 'Delete', fee_path(@fee), method: :delete, data: { confirm: 'Are you sure?' } if current_user %>
+<%= link_to 'Edit', edit_fee_path if current_user %> 
+<%= link_to 'Delete', fee_path(@fee), method: :delete, data: { confirm: 'Are you sure?' } if current_user && Rails.env.test? %>
