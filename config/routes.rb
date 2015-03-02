@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   	resources :users
   end
   resources :fees
-  resources :saves
+  resources :days
 end

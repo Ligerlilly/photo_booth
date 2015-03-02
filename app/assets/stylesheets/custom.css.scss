@@ -1,45 +1,22 @@
-.simple_form label {
-  float: left;
-  width: 100px;
-  text-align: right;
-  margin: 2px 10px;
+
+.simple_form {
+  width: 50%;
+  margin: 0 auto 0 auto;
+  margin-top: 2em;
 }
 
-.simple_form div.input {
-  margin-bottom: 10px;
+
+.save {
+  text-align: center;
 }
 
-.simple_form div.boolean, .simple_form input[type='submit'] {
-  margin-left: 120px;
+h1.save {
+  font-size: 3em;
 }
 
-.simple_form div.boolean label, .simple_form label.collection_radio {
-  float: none;
-  margin: 0;
+p.save {
+  font-size: 1.2em;
 }
-
-.simple_form label.collection_radio {
-  margin-right: 10px;
-  margin-left: 2px;
-}
-
-.simple_form .error {
-  clear: left;
-  margin-left: 120px;
-  font-size: 12px;
-  color: #D00;
-  display: block;
-}
-
-.simple_form .hint {
-  clear: left;
-  margin-left: 120px;
-  font-size: 12px;
-  color: #555;
-  display: block;
-  font-style: italic;
-}
-
 
 /* Carousel base class */
 .carousel {

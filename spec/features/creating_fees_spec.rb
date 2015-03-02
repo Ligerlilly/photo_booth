@@ -4,10 +4,12 @@
  	before do
  		FactoryGirl.create(:user)
  	end
+ 	
  	scenario 'visitors can not create fees' do
  		visit '/fees/new'
  		expect(page).to have_content('You must be admin.')
  	end
+
  	scenario 'user can create fees' do
  		visit '/admin'
  		click_link 'Sign in'

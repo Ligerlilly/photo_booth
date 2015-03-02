@@ -1,0 +1,11 @@
+
+<%= simple_form_for @day do |f| %>
+  <%= f.input :date_of_event, as: :date_picker %>
+  <%= f.input :event, label: 'Event name' %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :email %>
+  <%= f.input :telephone %>
+  <%= f.submit 'Save Day', class: 'btn btn-success' %>
+
+<% end %>

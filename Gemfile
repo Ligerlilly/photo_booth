@@ -16,6 +16,8 @@ gem 'simple_form'
 gem "rmagick"
 gem "carrierwave"
 gem 'devise'
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
+gem 'momentjs-rails', '~> 2.9', :github => 'derekprior/momentjs-rails'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
