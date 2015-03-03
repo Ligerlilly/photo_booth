@@ -1,11 +1,11 @@
 class DatePickerInput < SimpleForm::Inputs::StringInput
   def input(wrapper_options)
     value = object.send(attribute_name) if object.respond_to? attribute_name
-    display_pattern = I18n.t('datepicker.dformat', :default => '%m/%d/%Y')
+    display_pattern = I18n.t('datepicker.dformat', :default => '%Y/%m/%d')
     input_html_options[:value] ||= I18n.localize(value, :format => display_pattern) if value.present?
 
     input_html_options[:type] = 'text'
-    picker_pattern = I18n.t('datepicker.pformat', :default => 'MM/DD/YYYY')
+    picker_pattern = I18n.t('datepicker.pformat', :default => 'YYYY/MM/DD')
     dayViewHeaderFormat = I18n.t('dayViewHeaderFormat', :default => 'MMMM YYYY')
     date_options = {
         locale: I18n.locale.to_s,

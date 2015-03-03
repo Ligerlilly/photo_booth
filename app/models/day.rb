@@ -11,8 +11,8 @@ class Day < ActiveRecord::Base
         return: "#{Rails.application.secrets.app_host}#{return_path}",
         invoice: id,
         amount: 800,
-        item_name: 'Save the Day',
-        item_number: self.date_of_event,
+        item_name: "Save the Day - #{date_of_event}",
+        item_number: 1,
         quantity: '1',
         notify_url: "#{Rails.application.secrets.app_host}/hook"
     }

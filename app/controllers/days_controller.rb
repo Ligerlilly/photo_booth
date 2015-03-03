@@ -18,6 +18,10 @@ class DaysController < ApplicationController
   end
 
   def create
+    if day_params
+
+      flash[:notice] = /\d/.match(day_params[:date_of_event])[1]
+    end
     @day = Day.new(day_params)
     if @day.save
       redirect_to @day.paypal_url(day_path(@day))
@@ -38,6 +42,6 @@ class DaysController < ApplicationController
   end
 
   def day_params
-    params.require(:day).permit(:first_name, :last_name, :event, :email, :telephone, :date_of_event)
+    params.require(:day).permit(:date_of_event, :event, :first_name, :last_name,  :email, :telephone)
   end
 end
