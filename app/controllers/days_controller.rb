@@ -1,5 +1,6 @@
 class DaysController < ApplicationController
   before_action :find_day, except: [:new, :create, :index] 
+  before_action :admin?, only: :index
 
   def new
     @day = Day.new
@@ -18,10 +19,6 @@ class DaysController < ApplicationController
   end
 
   def create
-    if day_params
-
-      flash[:notice] = /\d/.match(day_params[:date_of_event])[1]
-    end
     @day = Day.new(day_params)
     if @day.save
       redirect_to @day.paypal_url(day_path(@day))

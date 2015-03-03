@@ -5,5 +5,5 @@
   <li>Last Name: <%= day.last_name %></li>
   <li>Email: <%= day.email %></li>
   <li>Telephone: <%= day.telephone %></li>
-  <li><%= day.id %></li>
+  <li>Created at: <%= time_ago_in_words(day.created_at) %> ago</li>
 </ul>
