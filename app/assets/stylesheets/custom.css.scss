@@ -5,6 +5,24 @@
   margin-top: 2em;
 }
 
+ul {
+  list-style: none;
+}
+
+.days {
+  text-align: center;
+  font-size: 1.3em;
+  width: 50%;
+  margin: 0 auto 2em auto;
+}
+
+ul.days li:nth-child(even) {
+  background-color: #ccc;
+}
+
+.invoice {
+  text-align: center;
+}
 
 .save {
   text-align: center;

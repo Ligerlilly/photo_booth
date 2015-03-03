@@ -1,6 +1,7 @@
 class Day < ActiveRecord::Base
   validates :first_name, :last_name, :event, :email, :date_of_event, :telephone, presence: true
-  validates :date_of_event, uniqueness: true
+  default_scope  { order(created_at: :desc) }
+
 
   serialize :notification_params, Hash
   def paypal_url(return_path)
